@@ -1,0 +1,2 @@
+# compresion-descompresion
+Tanto la información que se transmite como la que se almacena se puede medir, considerando la probabilidad de aparición de cada símbolo presente en el conjunto de los símbolos posibles. En los archivos que  contienen información, una técnica para reducir el ancho de banda utilizado al transmitir o almacenar su contenido supone una compresión previa y una descompresión posterior de manera de utilizar el mínimo recurso posible.
