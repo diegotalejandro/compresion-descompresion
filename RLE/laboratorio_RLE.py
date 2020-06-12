@@ -1,5 +1,5 @@
 import rle
-
+#Required install rle (pip/pip3 install rle).
 
 def compress(path, compressed_file_name):
     with open(path, 'rb') as file:
