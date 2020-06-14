@@ -41,7 +41,7 @@ time_start = process_time()
 #file_name = sys.argv[1]
 # if os.path.exists(file_name):
 for i in range(1, 31):
-    compress_string(str(i) + ".txt")    
+    compress_string("texts/" + str(i) + ".txt")    
 # --------------------------------------------------------
 time_stop = process_time()
 print("Tiempo de duración de la compresión: ",

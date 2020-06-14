@@ -1,11 +1,10 @@
 import rle
-#Required install rle (pip/pip3 install rle).
+from time import process_time
 
-def compress(path, compressed_file_name):
+def compress(path, file_number):
     with open(path, 'rb') as file:
         content_file = str(file.read(), 'utf-8')
     values, counts = rle.encode(content_file)    
-    print(content_file)
     values_string = "["
     for value in values[:-1]:
         values_string = values_string + "\'" + value + "\'" + ","
@@ -20,12 +19,11 @@ def compress(path, compressed_file_name):
         counts_string = counts_string + "\'" + str(count) + "\'"
     counts_string = counts_string + "]"
 
-    string_compress = values_string + ", " + counts_string
+    string_compress = values_string + "," + counts_string
 
-    f = open(compressed_file_name, 'w')
+    f = open("rle/" + file_number + ".txt", 'w')
     f.write(string_compress)
     f.close()
-    return values, counts
 
 
 def decompress(values, counts, decompressed_file_name):
@@ -39,14 +37,15 @@ def decompress(values, counts, decompressed_file_name):
     return string_decompress
 
 def main():
-    original_file_name = "example.txt"
-    compressed_file_name = "example_compress.txt"
-    decompressed_file_name = "example_decompress.txt"
-    values, counts = compress(original_file_name, compressed_file_name)
-    print(values, counts)
-    string_decompress = decompress(values, counts, decompressed_file_name)
-    print(string_decompress)
-    
+    time_start = process_time()
+    # --------------------------------------------------------
+    for i in range(1, 31):
+        compress("texts/" + str(i) + ".txt", str(i))
+    # --------------------------------------------------------
+    time_stop = process_time()
+    print("Tiempo de duración de la compresión: ",
+      time_stop-time_start, " segundos.")
+
 main()
 
 

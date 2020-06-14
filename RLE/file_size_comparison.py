@@ -26,13 +26,13 @@ def file_size_number(file_path):
 
 #----------------------------------------------------------------
 total_texts = 0
-total_bin = 0
+total_rle = 0
 for i in range(1,31):
     file_name_texts = "texts/" + str(i) + ".txt"
-    file_name_bin = "texts_compress/" + str(i) + ".bin"
+    file_name_rle = "rle/" + str(i) + ".txt"
     print("Nombre del archivo: " + str(i) + ".txt" + " - Tamaño del archivo original: " +
-          file_size(file_name_texts) + " - Tamaño del archivo comprimido: " + file_size(file_name_bin))
+          file_size(file_name_texts) + " - Tamaño del archivo comprimido: " + file_size(file_name_rle))
     total_texts = total_texts + int(file_size_number(file_name_texts))
-    total_bin = total_bin + int(file_size_number(file_name_bin))
-    porcentaje = total_bin/total_texts
-print("Porcentaje promedio de compresión: " + str(porcentaje*100) + "%")
+    total_rle = total_rle + int(file_size_number(file_name_rle))
+    porcentaje = total_rle/total_texts
+print("Porcentaje promedio de compresión de rle: " + str(porcentaje*100) + "%")

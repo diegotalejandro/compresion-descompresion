@@ -106,6 +106,5 @@ strings = ["zkncdmqafvewfqqwvftr",
            "zrqhnhdxkwxagpdirnhw",
            "dzkxapxjabtmirggugav",
            "ktueybhjxcgpymazdqkb"]
-print(entropy2(strings))
-print(eta(strings))
-print(eta(['mary', 'had', 'a', 'little', 'lamb']))
+#print(entropy2(strings))
+print("Entropia promedio: ", eta(strings)/30)
