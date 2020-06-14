@@ -4,7 +4,37 @@ import argparse
 from HuffmanCoding import HuffmanCoding
 import base64
 from time import process_time
-
+string_entrada = [
+    zkncdmqafvewfqqwvftr,
+    bydimeiddjncrvwahrxk,
+    ejunnkwykphqeftguetc,
+    wgnedmhdqcnthmxmaeih,
+    ncucwiffwtzpzxnjryif,
+    qyfrhgzdcirigmjviygq,
+    jnmmqinxfvpkhnaacbfj,
+    frnbmhxmjurqahxnuvqd,
+    xjjcqbiqcwvrdqimrntt,
+    dzvceqehcnkwpikmjizr,
+    pazfvdujarttiqhteqeu,
+    ptiuacatembkikmnjcpg,
+    ubquwvrgfpmybdgyqxjt,
+    crmbmpcxgunzdhgappxf,
+    cadvcnpurjegkhbanhqe,
+    xmjphxjgtkbqcpztyzex,
+    cafddrnmbrkfefwfnbij,
+    bbcdgpewhbxczptxxung,
+    cczzetgbkkxukbgbaxum,
+    iinqgcwfjuqpgiizrepn,
+    mrububyyfnyumxmiquxg,
+    qfbqvfzbmakwadcpjawe,
+    ihuuzahpymjwuwecgvub,
+    ekccrwnpqmmtuxeqmdty,
+    xigjjpjivjtetepexdiy,
+    akkgzttvqqmkzfxvzxhr,
+    upwgqukarcvmyiyjnthg,
+    zrqhnhdxkwxagpdirnhw,
+    dzkxapxjabtmirggugav,
+    ktueybhjxcgpymazdqkb]
 def file_to_string(path):
     string = ""
     with open(path, 'rb') as file:
