@@ -22,7 +22,7 @@ def convert_bytes_number(num):
 def file_size_number(file_path):
     if os.path.isfile(file_path):
         file_info = os.stat(file_path)
-        return convert_bytes_number(file_info.st_size)
+        return file_info.st_size
 
 #----------------------------------------------------------------
 total_texts = 0

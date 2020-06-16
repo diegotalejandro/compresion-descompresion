@@ -45,4 +45,4 @@ for i in range(1, 31):
 # --------------------------------------------------------
 time_stop = process_time()
 print("Tiempo de duración de la compresión: ",
-      time_stop-time_start, " segundos.")
+      (time_stop-time_start)/30, " segundos.")
